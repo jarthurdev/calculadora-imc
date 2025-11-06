@@ -14,8 +14,21 @@ calculateButton.addEventListener('click', () => {
     }
 
     const imc = weight / (height * height);
-    resultDiv.textContent = `Seu IMC é ${imc.toFixed(2)}`;
+    resultDiv.textContent = `Seu IMC é ${imc.toFixed(2)}, classificado como: ${classifyIMC(imc)}.`;
 
 
 });
+
+function classifyIMC(imc) {
+    if (imc < 18.5) {
+        return 'Abaixo do peso';
+    } else if (imc >= 18.5 && imc < 24.9) {
+        return 'Peso normal';
+    } else if (imc >= 25 && imc < 29.9) {
+        return 'Sobrepeso';
+    } else {
+        return 'Obesidade';
+    }
+}
+
 
