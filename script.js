@@ -14,7 +14,8 @@ calculateButton.addEventListener('click', () => {
     }
 
     const imc = weight / (height * height);
-    resultDiv.textContent = `Seu IMC é ${imc.toFixed(2)}, classificado como: ${classifyIMC(imc)}.`;
+    resultDiv.textContent = `Seu IMC é ${imc.toFixed(2)}, classificado como: ${classifyIMC(imc)}`;
+    applyIMCColor(imc);
 
 
 });
@@ -31,4 +32,24 @@ function classifyIMC(imc) {
     }
 }
 
+// Classificar o IMC por cores
+
+function getIMCColor(imc) {
+    if (imc < 18.5) {
+        return 'blue';
+    } else if (imc >= 18.5 && imc < 24.9) {
+        return 'green';
+    } else if (imc >= 25 && imc < 29.9) {
+        return 'orange';
+    } else {
+        return 'red';
+    }
+}
+
+// Aplicar a cor ao resultado
+
+function applyIMCColor(imc) {
+    const color = getIMCColor(imc);
+    resultDiv.style.color = color;
+}
 
