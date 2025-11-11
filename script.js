@@ -1,5 +1,6 @@
 const calculateButton = document.getElementById('calculate-button');
 const resultDiv = document.getElementById('result');
+const clearButton = document.getElementById('clear-button');
 
 calculateButton.addEventListener('click', () => {
 
@@ -53,3 +54,9 @@ function applyIMCColor(imc) {
     resultDiv.style.color = color;
 }
 
+clearButton.addEventListener('click', () => {
+
+    resultDiv.textContent = '';
+    document.getElementById('weight-input').value = '';
+    document.getElementById('height-input').value = '';
+})
