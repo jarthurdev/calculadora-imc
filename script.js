@@ -1,6 +1,8 @@
 const calculateButton = document.getElementById('calculate-button');
 const resultDiv = document.getElementById('result');
 const clearButton = document.getElementById('clear-button');
+const themeToggle = document.getElementById('theme-toggle');
+const bodyElement = document.body;
 
 calculateButton.addEventListener('click', () => {
 
@@ -60,3 +62,12 @@ clearButton.addEventListener('click', () => {
     document.getElementById('weight-input').value = '';
     document.getElementById('height-input').value = '';
 })
+
+themeToggle.addEventListener('click', () => {
+    bodyElement.classList.toggle('dark-mode');
+    if (bodyElement.classList.contains('dark-mode')) {
+        themeToggle.textContent = '☀️';
+    } else {
+        themeToggle.textContent = '🌙'
+    }
+});

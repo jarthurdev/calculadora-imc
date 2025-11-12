@@ -1,0 +1,142 @@
+/* --- 1. VARIÁVEIS DE TEMA (MODO CLARO - PADRÃO) --- */
+:root {
+    --cor-fundo: #f4f4f4;
+    --cor-texto: #333333;
+    --cor-fundo-titulo: #4CAF50;
+    --cor-texto-titulo: white;
+    --cor-input-fundo: #FFFFFF;
+    --cor-input-borda: #CCCCCC;
+    --cor-botao-primario: #008CBA;
+    --cor-botao-secundario: #f44336;
+}
+
+/* --- 2. VARIÁVEIS DE TEMA (MODO ESCURO) --- */
+body.dark-mode {
+    --cor-fundo: #222222;
+    --cor-texto: #f0f0f0;
+    --cor-fundo-titulo: #333;
+    --cor-texto-titulo: #4CAF50;
+    --cor-input-fundo: #555;
+    --cor-input-borda: #777;
+    --cor-botao-primario: #00aaff;
+    --cor-botao-secundario: #ff5566;
+}
+
+/* --- 3. ESTILOS GERAIS (BODY) --- */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px 20px 20px 20px; /* Espaço para o botão de tema no topo */
+
+    /* Aplica as variáveis */
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+
+    /* Âncora para posicionamento absoluto */
+    position: relative;
+
+    /* Transição suave ao mudar de tema */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* --- 4. TÍTULO (RETÂNGULO) --- */
+h1 {
+    /* Aplica as variáveis */
+    background-color: var(--cor-fundo-titulo);
+    color: var(--cor-texto-titulo);
+    margin-top: 0;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* --- 5. BOTÃO DE TEMA (SOL/LUA) --- */
+#theme-toggle {
+    position: absolute;
+    top: 35px;
+    right: 30px;
+
+    /* Estilo do botão */
+    background-color: var(--cor-input-fundo);
+    border: 1px solid var(--cor-input-borda);
+    color: var(--cor-texto);
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 50%; /* Redondo */
+    width: 45px;
+    height: 45px;
+
+    /* Centraliza o emoji */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+/* --- 6. FORMULÁRIO E INPUTS --- */
+#imc-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--cor-input-fundo);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: background-color 0.3s;
+}
+
+#imc-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+#imc-form input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid var(--cor-input-borda);
+    background-color: var(--cor-input-fundo);
+    color: var(--cor-texto);
+    border-radius: 5px;
+    box-sizing: border-box; /* Garante que o padding não quebre o layout */
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+/* --- 7. BOTÕES DE AÇÃO (CALCULAR / LIMPAR) --- */
+button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    margin-right: 10px;
+    transition: opacity 0.2s;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+#calculate-button {
+    background-color: var(--cor-botao-primario);
+}
+
+#clear-button {
+    background-color: var(--cor-botao-secundario);
+}
+
+/* --- 8. ÁREA DE RESULTADO --- */
+#result {
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px;
+    border-radius: 5px;
+}
