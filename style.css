@@ -11,6 +11,7 @@
 }
 
 /* --- 2. VARIÁVEIS DE TEMA (MODO ESCURO) --- */
+
 body.dark-mode {
     --cor-fundo: #222222;
     --cor-texto: #f0f0f0;
@@ -23,6 +24,7 @@ body.dark-mode {
 }
 
 /* --- 3. ESTILOS GERAIS (BODY) --- */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -139,4 +141,39 @@ button:hover {
     text-align: center;
     padding: 15px;
     border-radius: 5px;
+}
+
+/* --- 9. ESTILOS RESPONSIVOS --- */
+@media (max-width: 500px) {
+    body {
+        padding: 15px 10px 20px 10px;
+    }
+
+    #theme-toggle {
+        top: 25px;
+        right: 15px;
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    #imc-form {
+        padding: 15px;
+    }
+
+    button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #calculate-button, #clear-button {
+        margin-right: 0;
+    }
+
+}
+
+@media (max-width: 800px) {
+    #imc-form {
+        max-width: 300px;
+    }
 }
