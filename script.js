@@ -8,8 +8,9 @@ calculateButton.addEventListener('click', () => {
 
     event.preventDefault();
 
-    const weight = parseFloat(document.getElementById('weight-input').value);
-    const height = parseFloat(document.getElementById('height-input').value); 
+    const weight = parseFloat(document.getElementById('weight-input').value.replace(',', '.'));
+    const height = parseFloat(document.getElementById('height-input').value.replace(',', '.'));
+
 
     if (isNaN(weight) || isNaN(height) || height <= 0) {
         resultDiv.textContent = 'Por favor, insira valores válidos para peso e altura.';

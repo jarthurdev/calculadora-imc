@@ -28,22 +28,18 @@ body.dark-mode {
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 20px 20px 20px 20px; /* Espaço para o botão de tema no topo */
+    padding: 20px 20px 20px 20px;
 
-    /* Aplica as variáveis */
     background-color: var(--cor-fundo);
     color: var(--cor-texto);
 
-    /* Âncora para posicionamento absoluto */
     position: relative;
 
-    /* Transição suave ao mudar de tema */
     transition: background-color 0.3s, color 0.3s;
 }
 
 /* --- 4. TÍTULO (RETÂNGULO) --- */
 h1 {
-    /* Aplica as variáveis */
     background-color: var(--cor-fundo-titulo);
     color: var(--cor-texto-titulo);
     margin-top: 0;
@@ -60,7 +56,6 @@ h1 {
     top: 35px;
     right: 30px;
 
-    /* Estilo do botão */
     background-color: var(--cor-input-fundo);
     border: 1px solid var(--cor-input-borda);
     color: var(--cor-texto);
@@ -70,7 +65,6 @@ h1 {
     width: 45px;
     height: 45px;
 
-    /* Centraliza o emoji */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -79,6 +73,7 @@ h1 {
 }
 
 /* --- 6. FORMULÁRIO E INPUTS --- */
+
 #imc-form {
     max-width: 400px;
     margin: 0 auto;
